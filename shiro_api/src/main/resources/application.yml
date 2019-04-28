@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/shiro?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    initialSize: 50
+    minIdle: 50
+    maxActive: 500
+    maxWait: 60000
+    slowSqlMillis: 1000
+    enable-monitor: true
+
+mybatis:
+  mapper-locations: classpath*:sqlmap/*.xml
+  type-aliases-package: shiro.dal.dataobject
+server:
+  port: 8081
